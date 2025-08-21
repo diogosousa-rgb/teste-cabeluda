@@ -1,0 +1,215 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Cabeluda Girl - Nutri Cosmético Capilar</title>
+  <style>
+    body {
+      margin: 0;
+      font-family: 'Segoe UI', sans-serif;
+      background-color: #fdf7fb;
+      color: #333;
+    }
+    /* HERO */
+    header {
+      background: linear-gradient(135deg, #6a0dad, #ff69b4);
+      color: white;
+      text-align: center;
+      padding: 60px 20px;
+    }
+    header h1 {
+      font-size: 3rem;
+      margin: 0;
+    }
+    .blink {
+      animation: blink 1.2s infinite;
+      font-weight: bold;
+      color: yellow;
+      margin-top: 10px;
+    }
+    @keyframes blink { 50% { opacity: 0; } }
+
+    .btn {
+      background: #ff69b4;
+      color: white;
+      padding: 15px 30px;
+      border: none;
+      border-radius: 10px;
+      font-size: 18px;
+      cursor: pointer;
+      margin-top: 20px;
+      transition: transform 0.2s;
+    }
+    .btn:hover { transform: scale(1.05); }
+
+    section { padding: 60px 20px; max-width: 1100px; margin: auto; }
+
+    .block {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 30px;
+      margin-bottom: 60px;
+      flex-wrap: wrap;
+    }
+    .block img {
+      max-width: 400px;
+      border-radius: 20px;
+      box-shadow: 0 5px 15px rgba(0,0,0,0.2);
+    }
+    .block div { max-width: 500px; }
+
+    h2 { color: #6a0dad; margin-bottom: 20px; }
+
+    /* Benefícios */
+    .benefits ul {
+      list-style: none;
+      padding: 0;
+    }
+    .benefits li {
+      background: #f9f0ff;
+      border-left: 5px solid #ff69b4;
+      padding: 15px;
+      margin-bottom: 10px;
+      border-radius: 6px;
+    }
+
+    /* Reviews */
+    .reviews {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      gap: 20px;
+      margin-top: 30px;
+    }
+    .review {
+      background: #fff0f8;
+      border-radius: 15px;
+      padding: 20px;
+      text-align: center;
+      box-shadow: 0 5px 10px rgba(0,0,0,0.1);
+    }
+    .review img {
+      max-width: 100%;
+      border-radius: 10px;
+      margin-bottom: 10px;
+    }
+
+    .counter { font-size: 20px; margin-top: 10px; color: #a200d6; font-weight: bold; }
+
+    /* CTA final */
+    .cta {
+      text-align: center;
+      background: linear-gradient(135deg, #ff69b4, #6a0dad);
+      color: #fff;
+      padding: 50px 20px;
+      border-radius: 15px;
+    }
+    .cta h2 { color: #fff; margin-bottom: 20px; }
+
+    footer {
+      background: #6a0dad;
+      color: white;
+      text-align: center;
+      padding: 20px;
+    }
+  </style>
+</head>
+<body>
+  <!-- HERO -->
+  <header>
+    <h1>Cabeluda Girl</h1>
+    <p class="blink">⚡ Últimas Unidades Disponíveis! ⚡</p>
+    <button class="btn" onclick="comprar()">Comprar Agora</button>
+    <div class="counter" id="compradores">0 pessoas já compraram</div>
+  </header>
+
+  <!-- SOBRE O PRODUTO -->
+  <section class="block">
+    <img src="https://via.placeholder.com/400" alt="Produto Cabeluda Girl">
+    <div>
+      <h2>Sobre o Produto</h2>
+      <p>Cabeluda Girl é um nutri cosmético inovador que fortalece, acelera o crescimento e devolve o brilho natural dos cabelos. Desenvolvido com tecnologia exclusiva e ingredientes de alta performance, garantindo resultados visíveis em poucas semanas.</p>
+    </div>
+  </section>
+
+  <!-- VANTAGENS -->
+  <section class="benefits">
+    <h2>Vantagens</h2>
+    <ul>
+      <li>Acelera o crescimento capilar em até 3x mais rápido.</li>
+      <li>Reduz a queda e fortalece os fios desde a raiz.</li>
+      <li>Fórmula exclusiva, patenteada e cientificamente comprovada.</li>
+      <li>Resultados visíveis em poucas semanas.</li>
+    </ul>
+  </section>
+
+  <!-- PATENTEADO -->
+  <section class="block">
+    <div>
+      <h2>Fórmula Patenteada</h2>
+      <p>O Cabeluda Girl possui uma fórmula <strong>patenteada</strong>, resultado de anos de pesquisa em Biomedicina Estética. Exclusividade que garante qualidade, segurança e resultados que você não encontra em outro produto.</p>
+    </div>
+    <img src="https://via.placeholder.com/400" alt="Fórmula patenteada">
+  </section>
+
+  <!-- SOBRE A CRIADORA -->
+  <section class="block">
+    <img src="https://via.placeholder.com/400" alt="Biomédica Ozenilde">
+    <div>
+      <h2>Sobre a Criadora</h2>
+      <p>A Dra. Ozenilde, biomédica renomada, especialista em saúde capilar, desenvolveu o Cabeluda Girl para transformar a autoestima das mulheres. Com anos de experiência em pesquisa, ela uniu ciência e inovação em uma fórmula exclusiva.</p>
+    </div>
+  </section>
+
+  <!-- AVALIAÇÕES -->
+  <section>
+    <h2 style="text-align:center;">Antes e Depois</h2>
+    <div class="reviews">
+      <div class="review">
+        <img src="https://via.placeholder.com/300x200?text=Antes" alt="Antes">
+        <img src="https://via.placeholder.com/300x200?text=Depois" alt="Depois">
+        <p>“Em 2 meses de uso já vi resultados incríveis. Meu cabelo cresceu e ficou muito mais forte!” – Ana C.</p>
+      </div>
+      <div class="review">
+        <img src="https://via.placeholder.com/300x200?text=Antes" alt="Antes">
+        <img src="https://via.placeholder.com/300x200?text=Depois" alt="Depois">
+        <p>“Nunca pensei que voltaria a ter cabelos tão cheios e saudáveis. Estou apaixonada!” – Juliana M.</p>
+      </div>
+      <div class="review">
+        <img src="https://via.placeholder.com/300x200?text=Antes" alt="Antes">
+        <img src="https://via.placeholder.com/300x200?text=Depois" alt="Depois">
+        <p>“É simplesmente o melhor nutri cosmético que já usei. Recomendo para todas!” – Fernanda R.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- CTA FINAL -->
+  <section class="cta">
+    <h2>Garanta o seu agora!</h2>
+    <p>Não perca a chance de transformar seus cabelos com o Cabeluda Girl. Estoque limitado da primeira remessa!</p>
+    <button class="btn" onclick="comprar()">Comprar pelo WhatsApp</button>
+    <p><em>Oferta válida até hoje às 23:59!</em></p>
+  </section>
+
+  <footer>
+    <p>© 2025 Cabeluda Girl | Desenvolvido pela Biomédica Ozenilde</p>
+  </footer>
+
+  <script>
+    // Botão compra redireciona para WhatsApp
+    function comprar() {
+      window.open("https://wa.me/5598999999999?text=Olá! Quero comprar o Cabeluda Girl.", "_blank");
+    }
+
+    // Contador de compradores
+    let compradores = 325;
+    function atualizarCompradores() {
+      compradores += Math.floor(Math.random() * 3); 
+      document.getElementById("compradores").innerText = compradores + " pessoas já compraram";
+    }
+    setInterval(atualizarCompradores, 4000);
+    atualizarCompradores();
+  </script>
+</body>
+</html>
